@@ -1,4 +1,4 @@
-const fromroute=require("./route")
+const fromrouter=require("./route")
 
 const express=require("express")
 const cors=require("cors")
@@ -18,7 +18,7 @@ mongoose.connect("mongodb+srv://anex:anex123@cluster0.bgkikbl.mongodb.net/formDb
 
 //routing
 
-app.use("/api/signin",formroute)
+app.use("/api/signin",fromrouter)
 
 app.listen(3001,()=>{
     console.log("server running")
