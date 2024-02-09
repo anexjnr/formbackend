@@ -1,4 +1,5 @@
 const fromrouter=require("./route")
+const postrouter = require("./postrouter")
 
 const express=require("express")
 const cors=require("cors")
@@ -17,6 +18,7 @@ mongoose.connect("mongodb+srv://anex:anex123@cluster0.bgkikbl.mongodb.net/formDb
 })
 
 //routing
+app.use("/api/post",postrouter)
 
 app.use("/api/signin",fromrouter)
 
